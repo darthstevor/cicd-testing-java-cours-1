@@ -96,15 +96,15 @@ def sendEmail(recipients) {
 }
 
 String getEnvName(String branchName) {
-    if (branchName == 'main') {
+    if (branchName == 'master') {
         return 'prod'
     }
     return (branchName == 'ready') ? 'uat' : 'dev'
 }
 
 String getHTTPPort(String branchName) {
-    if (branchName == 'main') {
-        return '9999'
+    if (branchName == 'master') {
+        return '9005'
     }
     return (branchName == 'ready') ? '8888' : '8090'
 }
